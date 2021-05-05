@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDS</title>
+    <link rel="Stylesheet" href="style.css">
+    <link rel="Stylesheet" href="send.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="Shortcut Icon" href="img/logo.png">
+    <script src="https://kit.fontawesome.com/32373b1277.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 418 110">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill-rule: evenodd;
+                        }
+                    </style>
+                </defs>
+                <image id="Arrow" x="3" y="4" width="103" height="102"
+                    xlink:href="data:img/png;base64,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" />
+                <path id="Professional_Delivery_Service" data-name="Professional Delivery Service" class="cls-1"
+                    d="M133.1,55.63a6.332,6.332,0,0,0,4.419-1.569,6.184,6.184,0,0,0,1.978-4.181,5.468,5.468,0,0,0-1.117-4.108,4.7,4.7,0,0,0-3.656-1.666l-5.7-.012-3.076,17.773h3.5l1.086-6.25Zm-1.086-8.545,2.551,0.024a1.376,1.376,0,0,1,1.05.549,2.288,2.288,0,0,1,.4,1.343,4.217,4.217,0,0,1-.684,2.643,2.425,2.425,0,0,1-2.026,1.007l-2.258-.024Zm16.3,1.477a4.028,4.028,0,0,0-1.037-.183,2.171,2.171,0,0,0-1.233.385,4.413,4.413,0,0,0-1.172,1.337l0.269-1.453-3.162.012-2.295,13.208h3.381l1.526-8.728a2.444,2.444,0,0,1,2.185-1.282l1.075,0.122Zm1.954,1.581a8.467,8.467,0,0,0-1.99,4.9L148.2,55.7a8.242,8.242,0,0,0,.25,3.308,4.457,4.457,0,0,0,1.471,2.252,4.223,4.223,0,0,0,2.6.848A5.14,5.14,0,0,0,156.9,60.08a10.005,10.005,0,0,0,1.837-5.939V53.275a5.64,5.64,0,0,0-1.233-3.5,4.04,4.04,0,0,0-3.125-1.355A5.152,5.152,0,0,0,150.265,50.143Zm1.428,4.724a6,6,0,0,1,.793-2.716,1.734,1.734,0,0,1,1.587-.891q1.331,0.086,1.331,2.185,0,0.5-.171,2.258l-0.135.879q-0.525,2.783-2.282,2.685-1.294-.073-1.294-2.185Q151.522,56.644,151.693,54.868Zm12.06,7,1.844-10.62h2l0.452-2.588h-2l0.171-1.135a1.875,1.875,0,0,1,1.9-1.807,2.894,2.894,0,0,1,.818.134l0.281-2.783a7.307,7.307,0,0,0-1.611-.244,4.325,4.325,0,0,0-3.247,1.227,5.818,5.818,0,0,0-1.551,3.485l-0.146,1.111-1.55.012-0.452,2.588h1.55l-1.843,10.62h3.381Zm11.676-.256a4.482,4.482,0,0,0,1.874-1.44l-1.135-2.1a4.313,4.313,0,0,1-2.954,1.16,1.625,1.625,0,0,1-1.721-1.794,6.01,6.01,0,0,1,.036-1.013h6.592l0.232-1.587a10.534,10.534,0,0,0,.049-2.271,4.844,4.844,0,0,0-1.2-3.021,3.892,3.892,0,0,0-2.838-1.129,5.078,5.078,0,0,0-4.059,1.678,8.85,8.85,0,0,0-2,5.023l-0.11.9a7.006,7.006,0,0,0,.3,3.156,4.271,4.271,0,0,0,1.611,2.154,4.74,4.74,0,0,0,2.716.781A6.169,6.169,0,0,0,175.429,61.612Zm-0.177-8.74a8.48,8.48,0,0,1-.134,1.148l-3.357-.012,0.244-.891q0.575-1.916,2.027-1.855,1.269,0.061,1.22,1.611h0Zm9.662,6.354a1.742,1.742,0,0,1-1.08.336,1.3,1.3,0,0,1-1.062-.415,2.027,2.027,0,0,1-.3-1.367l-3.211-.012a4.081,4.081,0,0,0,1.2,3.088,4.453,4.453,0,0,0,3.149,1.257,5.916,5.916,0,0,0,2.5-.452,4.38,4.38,0,0,0,1.844-1.41A3.9,3.9,0,0,0,188.7,58.1a3.5,3.5,0,0,0-1.7-3.308,14.236,14.236,0,0,0-2-1.034q-1.386-.621-1.239-1.412a1.707,1.707,0,0,1,.506-0.955,1.38,1.38,0,0,1,1-.4,0.955,0.955,0,0,1,.824.357,1.978,1.978,0,0,1,.226,1.217h3.369a3.934,3.934,0,0,0-1.117-2.985,4.4,4.4,0,0,0-3.119-1.178,4.984,4.984,0,0,0-3.387,1.141,3.963,3.963,0,0,0-1.471,2.96,3.493,3.493,0,0,0,.3,1.636,3.752,3.752,0,0,0,1.062,1.312,10.543,10.543,0,0,0,2.179,1.263q1.452,0.672,1.331,1.526A1.486,1.486,0,0,1,184.914,59.225Zm11.133,0a1.742,1.742,0,0,1-1.08.336,1.294,1.294,0,0,1-1.062-.415,2.032,2.032,0,0,1-.306-1.367l-3.21-.012a4.08,4.08,0,0,0,1.2,3.088,4.457,4.457,0,0,0,3.15,1.257,5.916,5.916,0,0,0,2.5-.452,4.377,4.377,0,0,0,1.843-1.41,3.9,3.9,0,0,0,.763-2.155,3.5,3.5,0,0,0-1.7-3.308,14.211,14.211,0,0,0-1.995-1.034q-1.386-.621-1.239-1.412a1.7,1.7,0,0,1,.506-0.955,1.378,1.378,0,0,1,1-.4,0.955,0.955,0,0,1,.824.357,1.978,1.978,0,0,1,.226,1.217h3.369a3.934,3.934,0,0,0-1.117-2.985A4.4,4.4,0,0,0,196.59,48.4a4.982,4.982,0,0,0-3.387,1.141,3.963,3.963,0,0,0-1.471,2.96,3.48,3.48,0,0,0,.3,1.636,3.752,3.752,0,0,0,1.062,1.312,10.543,10.543,0,0,0,2.179,1.263q1.452,0.672,1.33,1.526A1.481,1.481,0,0,1,196.047,59.225ZM207.21,48.66h-3.381l-2.3,13.208h3.381ZM204.787,46.6a1.683,1.683,0,0,0,1.3.494,1.767,1.767,0,0,0,1.3-.531,1.874,1.874,0,0,0,.531-1.386,1.728,1.728,0,0,0-.531-1.288A1.692,1.692,0,0,0,206.1,43.4a1.769,1.769,0,0,0-1.3.531,1.858,1.858,0,0,0-.531,1.373A1.763,1.763,0,0,0,204.787,46.6Zm5.67,3.54a8.473,8.473,0,0,0-1.989,4.9l-0.074.659a8.241,8.241,0,0,0,.251,3.308,4.457,4.457,0,0,0,1.471,2.252,4.223,4.223,0,0,0,2.6.848,5.14,5.14,0,0,0,4.376-2.032,10.005,10.005,0,0,0,1.837-5.939V53.275a5.64,5.64,0,0,0-1.233-3.5,4.04,4.04,0,0,0-3.125-1.355A5.155,5.155,0,0,0,210.457,50.143Zm1.429,4.724a5.983,5.983,0,0,1,.793-2.716,1.734,1.734,0,0,1,1.587-.891q1.331,0.086,1.331,2.185,0,0.5-.171,2.258l-0.135.879q-0.525,2.783-2.282,2.685-1.294-.073-1.294-2.185Q211.715,56.644,211.886,54.868Zm10.119-6.207L219.71,61.868H223.1l1.672-9.607a4.326,4.326,0,0,1,.684-0.678,1.4,1.4,0,0,1,.891-0.287q1.123,0,1.074,1.428l-0.061.72-1.391,8.423h3.381l1.4-8.4,0.073-1.123a4.892,4.892,0,0,0-.714-2.9A2.5,2.5,0,0,0,228,48.4a3.876,3.876,0,0,0-3.088,1.575l0.244-1.331Zm19.446,13.208,0.012-.22a3.977,3.977,0,0,1-.171-1.5l0.049-.647,1.074-6.714a3.678,3.678,0,0,0-3.857-4.382,5.3,5.3,0,0,0-3.54,1.166,4.121,4.121,0,0,0-1.563,3.07l3.357-.024q0.256-1.55,1.441-1.514a0.859,0.859,0,0,1,.854,1.062l-0.036.549-0.159,1.074h-0.989a6.493,6.493,0,0,0-4.1,1.19,4.239,4.239,0,0,0-1.636,3.29A3.829,3.829,0,0,0,233.034,61a3.106,3.106,0,0,0,2.448,1.123,3.342,3.342,0,0,0,2.563-1.282,4.563,4.563,0,0,0,.1,1.025h3.308Zm-5.621-2.71a1.011,1.011,0,0,1-.2-0.647l0.012-.464a2.623,2.623,0,0,1,.721-1.538,2.272,2.272,0,0,1,1.574-.659h0.733l-0.6,2.8a2.189,2.189,0,0,1-1.66.781A0.724,0.724,0,0,1,235.83,59.158Zm14.361-16.04H246.8l-3.247,18.75h3.381Zm10.132,18.75a7.11,7.11,0,0,0,5.17-2.039,9.62,9.62,0,0,0,2.594-5.615l0.39-2.6a8.455,8.455,0,0,0-.311-3.821,5.282,5.282,0,0,0-1.916-2.673,5.711,5.711,0,0,0-3.278-1.013l-4.382-.012-3.076,17.773h4.809Zm2.5-14.77a2.309,2.309,0,0,1,1.66.623,2.741,2.741,0,0,1,.622,1.807,12.861,12.861,0,0,1-.134,2.051l-0.415,2.881a6.189,6.189,0,0,1-1.343,3.4,3.7,3.7,0,0,1-2.82,1.056l-0.866-.024,2.05-11.8Zm14.386,14.514a4.479,4.479,0,0,0,1.873-1.44l-1.135-2.1A4.313,4.313,0,0,1,275,59.232a1.625,1.625,0,0,1-1.721-1.794,6.117,6.117,0,0,1,.036-1.013H279.9l0.232-1.587a10.534,10.534,0,0,0,.049-2.271,4.849,4.849,0,0,0-1.2-3.021,3.894,3.894,0,0,0-2.839-1.129,5.076,5.076,0,0,0-4.058,1.678,8.85,8.85,0,0,0-2,5.023l-0.11.9a7.02,7.02,0,0,0,.3,3.156,4.282,4.282,0,0,0,1.611,2.154,4.74,4.74,0,0,0,2.716.781A6.176,6.176,0,0,0,277.212,61.612Zm-0.177-8.74a8.508,8.508,0,0,1-.135,1.148l-3.357-.012,0.244-.891q0.575-1.916,2.027-1.855,1.269,0.061,1.221,1.611h0Zm10.656-9.753H284.3l-3.247,18.75h3.381Zm5.274,5.542h-3.382l-2.3,13.208h3.382ZM290.542,46.6a1.682,1.682,0,0,0,1.3.494,1.769,1.769,0,0,0,1.3-.531,1.874,1.874,0,0,0,.531-1.386,1.728,1.728,0,0,0-.531-1.288,1.693,1.693,0,0,0-1.288-.494,1.767,1.767,0,0,0-1.3.531,1.858,1.858,0,0,0-.531,1.373A1.763,1.763,0,0,0,290.542,46.6Zm7.586,2.057h-3.454l1.477,13.208h3.21L304.94,48.66h-3.589l-2.9,8.264ZM312.27,61.612a4.482,4.482,0,0,0,1.874-1.44l-1.135-2.1a4.313,4.313,0,0,1-2.954,1.16,1.626,1.626,0,0,1-1.722-1.794,6.12,6.12,0,0,1,.037-1.013h6.592l0.232-1.587a10.6,10.6,0,0,0,.049-2.271,4.849,4.849,0,0,0-1.2-3.021,3.893,3.893,0,0,0-2.838-1.129,5.078,5.078,0,0,0-4.059,1.678,8.857,8.857,0,0,0-2,5.023l-0.11.9a7.019,7.019,0,0,0,.3,3.156,4.271,4.271,0,0,0,1.611,2.154,4.738,4.738,0,0,0,2.716.781A6.172,6.172,0,0,0,312.27,61.612Zm-0.177-8.74a8.48,8.48,0,0,1-.134,1.148l-3.357-.012,0.244-.891q0.573-1.916,2.026-1.855,1.27,0.061,1.221,1.611h0Zm12.476-4.309a4.041,4.041,0,0,0-1.038-.183,2.176,2.176,0,0,0-1.233.385,4.427,4.427,0,0,0-1.172,1.337l0.269-1.453-3.162.012-2.3,13.208h3.382l1.526-8.728a2.442,2.442,0,0,1,2.185-1.282l1.074,0.122Zm4.614,0.1h-3.528l1.367,13.159-0.561,1.257a2.092,2.092,0,0,1-2.027,1.233l-0.366-.024-0.293,2.7a6.28,6.28,0,0,0,1.49.256,3.526,3.526,0,0,0,2.282-.8,6.472,6.472,0,0,0,1.734-2.582l6.811-15.2h-3.686l-2.991,7.4Zm19.5,9.943a2.008,2.008,0,0,1-1.5.592,1.86,1.86,0,0,1-1.593-.677,3.47,3.47,0,0,1-.409-2.252l-3.515-.012a5.666,5.666,0,0,0,1.318,4.187,5.1,5.1,0,0,0,3.918,1.685,5.98,5.98,0,0,0,4.114-1.337,5.156,5.156,0,0,0,1.831-3.7,4.87,4.87,0,0,0-.891-3.418,8,8,0,0,0-3.1-2.283q-2.16-1.013-1.977-2.441a2.557,2.557,0,0,1,.775-1.556,2.067,2.067,0,0,1,1.532-.58q1.734,0.037,1.6,2.539l3.491,0.012a5.52,5.52,0,0,0-1.19-3.925,4.548,4.548,0,0,0-3.57-1.581,6.5,6.5,0,0,0-2.954.61,5.5,5.5,0,0,0-2.2,1.813,5.179,5.179,0,0,0-.934,2.655,4.717,4.717,0,0,0,2.051,4.285,11.628,11.628,0,0,0,2.033,1.2,3.828,3.828,0,0,1,1.6,1.184,2.191,2.191,0,0,1,.262,1.508A2.672,2.672,0,0,1,348.678,58.6Zm13.592,3.009a4.482,4.482,0,0,0,1.874-1.44l-1.135-2.1a4.313,4.313,0,0,1-2.954,1.16,1.626,1.626,0,0,1-1.722-1.794,6.12,6.12,0,0,1,.037-1.013h6.592l0.232-1.587a10.6,10.6,0,0,0,.049-2.271,4.849,4.849,0,0,0-1.2-3.021,3.893,3.893,0,0,0-2.838-1.129,5.078,5.078,0,0,0-4.059,1.678,8.857,8.857,0,0,0-2,5.023l-0.11.9a7.019,7.019,0,0,0,.3,3.156,4.271,4.271,0,0,0,1.611,2.154,4.738,4.738,0,0,0,2.716.781A6.172,6.172,0,0,0,362.27,61.612Zm-0.177-8.74a8.48,8.48,0,0,1-.134,1.148l-3.357-.012,0.244-.891q0.573-1.916,2.026-1.855,1.27,0.061,1.221,1.611h0Zm12.476-4.309a4.041,4.041,0,0,0-1.038-.183,2.176,2.176,0,0,0-1.233.385,4.427,4.427,0,0,0-1.172,1.337l0.269-1.453-3.162.012-2.3,13.208h3.382l1.526-8.728a2.442,2.442,0,0,1,2.185-1.282l1.074,0.122Zm4.529,0.1h-3.455l1.477,13.208h3.21l5.579-13.208H382.32l-2.9,8.264Zm12.084,0H387.8l-2.3,13.208h3.382ZM388.759,46.6a1.684,1.684,0,0,0,1.3.494,1.767,1.767,0,0,0,1.3-.531,1.874,1.874,0,0,0,.531-1.386,1.728,1.728,0,0,0-.531-1.288,1.691,1.691,0,0,0-1.287-.494,1.767,1.767,0,0,0-1.3.531,1.858,1.858,0,0,0-.531,1.373A1.762,1.762,0,0,0,388.759,46.6Zm6.806,11.308a7.736,7.736,0,0,1,.1-1.65l0.232-2.213q0.342-2.885,2.137-2.787,1.146,0.061,1.2,1.575l-0.012.757,3.174,0.012a5.606,5.606,0,0,0-.94-3.742,3.751,3.751,0,0,0-3.052-1.447,4.993,4.993,0,0,0-4.553,2.319,9.08,9.08,0,0,0-1.337,3.626,13.434,13.434,0,0,0-.177,3.711,4.65,4.65,0,0,0,1.3,2.948,4.215,4.215,0,0,0,2.936,1.1,4.66,4.66,0,0,0,3.454-1.294,5.393,5.393,0,0,0,1.624-3.54l-3.162.012q-0.329,2.014-1.721,1.977a1.215,1.215,0,0,1-1.2-1.369h0Zm15.35,3.7a4.482,4.482,0,0,0,1.874-1.44l-1.135-2.1a4.313,4.313,0,0,1-2.954,1.16,1.626,1.626,0,0,1-1.722-1.794,6.12,6.12,0,0,1,.037-1.013h6.592l0.232-1.587a10.6,10.6,0,0,0,.049-2.271,4.849,4.849,0,0,0-1.2-3.021,3.893,3.893,0,0,0-2.838-1.129,5.078,5.078,0,0,0-4.059,1.678,8.857,8.857,0,0,0-2,5.023l-0.11.9a7.019,7.019,0,0,0,.3,3.156,4.271,4.271,0,0,0,1.611,2.154,4.74,4.74,0,0,0,2.716.781A6.172,6.172,0,0,0,410.915,61.612Zm-0.177-8.74a8.48,8.48,0,0,1-.134,1.148l-3.357-.012,0.244-.891q0.573-1.916,2.026-1.855,1.27,0.061,1.221,1.611h0Z" />
+            </svg>
+        </a>
+        <div class="mobile-nav-container">
+            <p>Professional Delivery Service</p>
+            <i class="mobile-menu-icon menu-open"><img src="img/menuButton.png" alt="Ikona menu"></i>
+        </div>
+        <ul class="mobile-nav">
+            <i class="mobile-menu-icon menu-close"><img src="img/menuButtonClose.png" alt="Ikona menu"></i>
+            <li><a href="index.html">Główna</a></li>
+            <li><a href="send.html">Nadaj paczkę</a></li>
+            <li><a href="send.html">Odbierz paczkę</a></li>
+            <li><a href="prices.html">Cennik</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="main-container">
+            <div class="main-content">
+                <h1>Nadaj paczkę</h1>
+                <form method="GET" action="">
+                    <section>
+                        <h3>Rozmiar paczki</h3>
+                        <div class="package">
+                            <div class="pack-size small-pack">
+                                <label>Mała paczka</label>
+                                <span>
+                                    max. 8 x 38 x 64cm
+                                    <br>
+                                    do 25kg
+                                </span>
+                                <p class="price">13,00 zł</p>
+                                <label class="control control-radio" name="pack-size">
+                                    <input type="radio" name="radio" required>
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="pack-size medium-pack">
+                                <label>Średnia paczka</label>
+                                <span>
+                                    max. 19 x 38 x 64cm
+                                    <br>
+                                    do 35 kg
+                                </span>
+                                <p class="price">14,20 zł</p>
+                                <label class="control control-radio" name="pack-size">
+                                    <input type="radio" name="radio" required>
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="pack-size big-pack">
+                                <label>Duża paczka</label>
+                                <span>
+                                    max. 41 x 38 x 64cm
+                                    <br>
+                                    do 50kg
+                                </span>
+                                <p class="price">16,71 zł</p>
+                                <label class="control control-radio" name="pack-size">
+                                    <input type="radio" name="radio" required>
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Odbiorca</h3>
+                        <div class="recipient">
+                            <input type="text" name="recipient-name" placeholder="Wpisz imię i nazwisko lub nazwę firmy" required>
+                            <input type="email" name="recipient-email" placeholder="Wpisz adres e-mail" required>
+                            <input type="tel" name="recipient-number" placeholder="Wpisz numer telefonu" required>
+                            <input type="text" name="recipient-city" placeholder="Wpisz miasto, kod pocztowy" required>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Nadawca</h3>
+                        <div class="sender">
+                            <input type="text" name="sender-name" placeholder="Wpisz imię i nazwisko lub nazwę firmy" required>
+                            <input type="email" name="sender-email" placeholder="Wpisz adres e-mail" required>
+                            <input type="tel" name="sender-number" placeholder="Wpisz numer telefonu" required>
+                            <input type="text" name="sender-city" placeholder="Wpisz miasto, kod pocztowy" required>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Sposób dostawy</h3>
+                        <div class="delivery-type">
+                            <select name="delivery-type" id="delivery-type" required>
+                                <option value="">Wybierz</option>
+                                <option value="paczkomat">Paczkomat</option>
+                                <option value="kurier">Kurier</option>
+                                <option value="orlen">Odbiór na stacji Orlen</option>
+                            </select>
+                        </div>
+                    </section>
+                    <input type="submit" value="Wyślij">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer mobile-footer">
+            <p>
+                PDS Paweł Poremba &copy; 2021
+            </p>
+            <div class="mobile-footer-container">
+                <p>
+                    Kontakt:
+                    <br>
+                    <a title="Poczta elektroniczna" href="mailto:pomoctechniczna@pds.pl"><i
+                            class="fas fa-envelope-square"></i></a>
+                    <a title="Facebook" href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a title="LinkedIn" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a title="Twitter" href="#"><i class="fab fa-twitter-square"></i></a>
+                </p>
+                <p class="footer-links">
+                    <a href="index.html">O nas</a>
+                    <a href="send.html">Nadaj paczkę</a>
+                    <a href="send.html">Odbierz paczkę</a>
+                    <a href="prices.html">Cennik</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer std-footer">
+            <p>
+                PDS <a href="mailto:pawelporemba123@gmail.com" style="color: #000;">Paweł Poremba</a> &copy; 2021
+            </p>
+            <p>
+                Kontakt:
+                <a title="Poczta elektroniczna" href="mailto:pomoctechniczna@pds.pl"><i
+                        class="fas fa-envelope-square"></i></a>
+                <a title="Facebook" href="#"><i class="fab fa-facebook-square"></i></a>
+                <a title="LinkedIn" href="#"><i class="fab fa-linkedin"></i></a>
+                <a title="Twitter" href="#"><i class="fab fa-twitter-square"></i></a>
+            </p>
+            <p class="footer-links">
+                <a href="index.html">O nas</a>
+                <a href="send.html">Nadaj paczkę</a>
+                <a href="send.html">Odbierz paczkę</a>
+                <a href="prices.html">Cennik</a>
+            </p>
+        </div>
+    </footer>
+    <script>
+        const smallPack = document.querySelector(".small-pack");
+        const mediumPack = document.querySelector(".medium-pack");
+        const bigPack = document.querySelector(".big-pack");
+
+        const inputRadioIsChecked = () => {
+            if (!document.querySelector(".small-pack input[type='radio']").checked) {
+                smallPack.style.backgroundColor = "transparent";
+                smallPack.classList.remove("pack-size-scaleUp");
+            }
+            if (!document.querySelector(".medium-pack input[type='radio']").checked) {
+                mediumPack.style.backgroundColor = "transparent";
+                mediumPack.classList.remove("pack-size-scaleUp");
+            }
+            if (!document.querySelector(".big-pack input[type='radio']").checked) {
+                bigPack.style.backgroundColor = "transparent";
+                bigPack.classList.remove("pack-size-scaleUp");
+            }
+        }
+
+        inputRadioIsChecked();
+
+        smallPack.addEventListener("click", () => {
+            document.querySelector(".small-pack input[type='radio']").checked = true;
+            smallPack.style.backgroundColor = "#47E74F";
+            smallPack.classList.add("pack-size-scaleUp");
+            inputRadioIsChecked();
+        });
+
+        mediumPack.addEventListener("click", () => {
+            document.querySelector(".medium-pack input[type='radio']").checked = true;
+            mediumPack.style.backgroundColor = "#47E74F";
+            mediumPack.classList.add("pack-size-scaleUp");
+            inputRadioIsChecked();
+        });
+
+        bigPack.addEventListener("click", () => {
+            document.querySelector(".big-pack input[type='radio']").checked = true;
+            bigPack.style.backgroundColor = "#47E74F";
+            bigPack.classList.add("pack-size-scaleUp");
+            inputRadioIsChecked();
+        });
+        
+    </script>
+</body>
+
+</html>
