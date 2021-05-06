@@ -1,0 +1,46 @@
+/* Nagłówek */
+
+header {
+    clear: both;
+}
+
+.header-container {
+    width: 70%;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+header h3 {
+    line-height: 25px;
+    font-size: 18px;
+}
+
+header p {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+header p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .header-container {
+        padding-top: 10vh !important;
+    }
+
+    header h1 {
+        font-size: 31px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .parcel-tracker>input[type=submit] {
+        margin-left: 1vw;
+    }
+}
