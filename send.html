@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
     <script src="https://kit.fontawesome.com/32373b1277.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </head>
+
 <body>
     <nav>
         <a href="index.html">
@@ -51,6 +53,7 @@
                 <form method="GET" action="">
                     <section>
                         <h3>Rozmiar paczki</h3>
+                        <h5>Wybierz rozmiar paczki</h5>
                         <div class="package">
                             <div class="pack-size small-pack">
                                 <label>Mała paczka</label>
@@ -95,27 +98,38 @@
                     </section>
                     <section>
                         <h3>Odbiorca</h3>
+                        <h5>Wprowadź dane odbiorcy</h5>
                         <div class="recipient">
-                            <input type="text" name="recipient-name" placeholder="Wpisz imię i nazwisko lub nazwę firmy" required>
-                            <input type="email" name="recipient-email" placeholder="Wpisz adres e-mail" required>
-                            <input type="tel" name="recipient-number" placeholder="Wpisz numer telefonu" required>
-                            <input type="text" name="recipient-city" placeholder="Wpisz miasto, kod pocztowy" required>
+                            <label for="recipient-name">Imię i nazwisko lub nazwa firmy</label>
+                            <input type="text" name="recipient-name" required>
+                            <label for="recipient-email">Adres e-mail</label>
+                            <input type="email" name="recipient-email" required>
+                            <label for="recipient-number">Numer telefonu</label>
+                            <input type="tel" name="recipient-number" required>
+                            <label for="recipient-city">Adres odbiorcy</label>
+                            <input type="text" name="recipient-city" required>
                         </div>
                     </section>
                     <section>
                         <h3>Nadawca</h3>
+                        <h5>Wprowadź dane nadawcy</h5>
                         <div class="sender">
-                            <input type="text" name="sender-name" placeholder="Wpisz imię i nazwisko lub nazwę firmy" required>
-                            <input type="email" name="sender-email" placeholder="Wpisz adres e-mail" required>
-                            <input type="tel" name="sender-number" placeholder="Wpisz numer telefonu" required>
-                            <input type="text" name="sender-city" placeholder="Wpisz miasto, kod pocztowy" required>
+                            <label for="sender-name">Imię i nazwisko lub nazwa firmy</label>
+                            <input type="text" name="sender-name" required>
+                            <label for="sender-email">Adres e-mail</label>
+                            <input type="email" name="sender-email" required>
+                            <label for="sender-number">Numer telefonu</label>
+                            <input type="tel" name="sender-number" required>
+                            <label for="sender-city">Twój adres</label>
+                            <input type="text" name="sender-city" required>
                         </div>
                     </section>
                     <section>
                         <h3>Sposób dostawy</h3>
+                        <h5>Wybierz sposób dostawy paczki</h5>
                         <div class="delivery-type">
                             <select name="delivery-type" id="delivery-type" required>
-                                <option value="">Wybierz</option>
+                                <option value=""></option>
                                 <option value="paczkomat">Paczkomat</option>
                                 <option value="kurier">Kurier</option>
                                 <option value="orlen">Odbiór na stacji Orlen</option>
@@ -177,15 +191,15 @@
 
         const inputRadioIsChecked = () => {
             if (!document.querySelector(".small-pack input[type='radio']").checked) {
-                smallPack.style.backgroundColor = "transparent";
+                smallPack.style.backgroundColor = "#fff";
                 smallPack.classList.remove("pack-size-scaleUp");
             }
             if (!document.querySelector(".medium-pack input[type='radio']").checked) {
-                mediumPack.style.backgroundColor = "transparent";
+                mediumPack.style.backgroundColor = "#fff";
                 mediumPack.classList.remove("pack-size-scaleUp");
             }
             if (!document.querySelector(".big-pack input[type='radio']").checked) {
-                bigPack.style.backgroundColor = "transparent";
+                bigPack.style.backgroundColor = "#fff";
                 bigPack.classList.remove("pack-size-scaleUp");
             }
         }
@@ -212,7 +226,7 @@
             bigPack.classList.add("pack-size-scaleUp");
             inputRadioIsChecked();
         });
-        
     </script>
 </body>
+
 </html>

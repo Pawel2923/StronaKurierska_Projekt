@@ -52,3 +52,45 @@ header p:last-child {
         margin-left: 1vw;
     }
 }
+
+/* Content pod nagłówkiem */
+
+.about {
+    position: relative;
+}
+
+.about p {
+    margin-bottom: 10vh;
+}
+
+.about p:last-of-type {
+    margin-bottom: 0;
+}
+
+.line {
+    display: none;
+}
+
+
+@media screen and (min-width: 600px) {
+    .main-content h1 {
+        text-align: center;
+    }
+
+    .about p {
+        font-size: 1.3em;
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .line {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        margin-left: -1px;
+        background-color: #bbbbbb;
+        width: 2px;
+        height: 80%;
+    }
+}
