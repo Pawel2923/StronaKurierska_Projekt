@@ -165,21 +165,20 @@ section:last-child {
 
 input[type=text],
 input[type=email],
-input[type=tel] {
-    width: 250px;
+input[type=tel],
+input[type=submit],
+select {
+    width: 40%;
     display: block;
     margin-bottom: 10px;
 }
 
 input[type=text]:last-child,
 input[type=email]:last-child,
-input[type=tel]:last-child {
+input[type=tel]:last-child,
+input[type=submit]:last-child,
+select:last-child {
     margin-bottom: 0;
-}
-
-select,
-input[type=submit] {
-    width: 250px;
 }
 
 /* Mobile */
@@ -230,5 +229,11 @@ input[type=submit] {
     .control_indicator {
         height: 15px;
         width: 15px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel] {
+        width: 250px;
     }
 }
