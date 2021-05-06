@@ -249,8 +249,8 @@ select:last-child {
     }
 
     .control-radio .control_indicator:after {
-        left: 3px;
-        top: 3px;
+        left: 2px;
+        top: 2px;
         height: 9px;
         width: 9px;
     }
