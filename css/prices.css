@@ -42,3 +42,24 @@ tr:nth-of-type(2n) {
 .table-container {
     width: fit-content;
 }
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+    .main-content {
+        padding-left: 0;
+        padding-right: 0;
+        overflow-x: hidden;
+    }
+
+    table {
+        padding: 0;
+        width: 100vw;
+        font-size: .9em;
+    }
+
+    td,
+    th {
+        padding: 2vw;
+    }
+}
