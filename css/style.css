@@ -196,7 +196,7 @@ main {
     margin-bottom: 5vh;
 }
 
-h1 {
+*>h1 {
     width: fit-content;
     height: auto;
     position: relative;
@@ -204,7 +204,7 @@ h1 {
     text-transform: capitalize;
 }
 
-h1::after {
+*>h1::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -217,7 +217,7 @@ h1::after {
     z-index: -1;
 }
 
-h1:nth-of-type(2n)::after {
+*>h1:nth-of-type(2n)::after {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 

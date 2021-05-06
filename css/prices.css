@@ -9,6 +9,11 @@ main h1:first-child {
 table {
     width: 100%;
     border: 1px solid #aaa;
+    margin-bottom: 5vh;
+}
+
+table:last-of-type {
+    margin-bottom: 0;
 }
 
 table,
