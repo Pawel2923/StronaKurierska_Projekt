@@ -195,10 +195,7 @@ main {
 }
 
 main h1 {
-    width: fit-content;
-    height: auto;
     position: relative;
-    padding: 10px;
     text-transform: capitalize;
 }
 
