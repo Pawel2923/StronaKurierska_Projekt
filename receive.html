@@ -15,6 +15,32 @@
     <link rel="Shortcut Icon" href="img/logo.png">
     <script src="https://kit.fontawesome.com/32373b1277.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <style>
+        .badges {
+            width: 300px;
+        }
+
+        .badge {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Desktop/Laptops */
+
+        @media screen and (min-width: 1024px) {
+            footer {
+                margin-top: 10vh;
+            }
+        }
+
+        /* 4k */
+
+        @media screen and (min-width: 2560px) {
+            footer {
+                margin-top: 20vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -50,95 +76,15 @@
     <main>
         <div class="main-container">
             <div class="main-content">
-                <h1>Nadaj paczkę</h1>
-                <form method="GET" action="">
-                    <section>
-                        <h3>Rozmiar paczki</h3>
-                        <h5>Wybierz rozmiar paczki</h5>
-                        <div class="package">
-                            <div class="pack-size small-pack">
-                                <label>Mała paczka</label>
-                                <span>
-                                    max. 8 x 38 x 64cm
-                                    <br>
-                                    do 25kg
-                                </span>
-                                <p class="price">13,00 zł</p>
-                                <label class="control control-radio" name="pack-size">
-                                    <input type="radio" name="radio" required>
-                                    <div class="control_indicator"></div>
-                                </label>
-                            </div>
-                            <div class="pack-size medium-pack">
-                                <label>Średnia paczka</label>
-                                <span>
-                                    max. 19 x 38 x 64cm
-                                    <br>
-                                    do 35 kg
-                                </span>
-                                <p class="price">14,20 zł</p>
-                                <label class="control control-radio" name="pack-size">
-                                    <input type="radio" name="radio" required>
-                                    <div class="control_indicator"></div>
-                                </label>
-                            </div>
-                            <div class="pack-size big-pack">
-                                <label>Duża paczka</label>
-                                <span>
-                                    max. 41 x 38 x 64cm
-                                    <br>
-                                    do 50kg
-                                </span>
-                                <p class="price">16,71 zł</p>
-                                <label class="control control-radio" name="pack-size">
-                                    <input type="radio" name="radio" required>
-                                    <div class="control_indicator"></div>
-                                </label>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h3>Odbiorca</h3>
-                        <h5>Wprowadź dane odbiorcy</h5>
-                        <div class="recipient">
-                            <label for="recipient-name">Imię i nazwisko lub nazwa firmy</label>
-                            <input type="text" name="recipient-name" required>
-                            <label for="recipient-email">Adres e-mail</label>
-                            <input type="email" name="recipient-email" required>
-                            <label for="recipient-number">Numer telefonu</label>
-                            <input type="tel" name="recipient-number" required>
-                            <label for="recipient-city">Adres odbiorcy</label>
-                            <input type="text" name="recipient-city" required>
-                        </div>
-                    </section>
-                    <section>
-                        <h3>Nadawca</h3>
-                        <h5>Wprowadź dane nadawcy</h5>
-                        <div class="sender">
-                            <label for="sender-name">Imię i nazwisko lub nazwa firmy</label>
-                            <input type="text" name="sender-name" required>
-                            <label for="sender-email">Adres e-mail</label>
-                            <input type="email" name="sender-email" required>
-                            <label for="sender-number">Numer telefonu</label>
-                            <input type="tel" name="sender-number" required>
-                            <label for="sender-city">Twój adres</label>
-                            <input type="text" name="sender-city" required>
-                        </div>
-                    </section>
-                    <section>
-                        <h3>Sposób dostawy</h3>
-                        <h5>Wybierz sposób dostawy paczki</h5>
-                        <div class="delivery-type">
-                            <select name="delivery-type" id="delivery-type" required>
-                                <option value=""></option>
-                                <option value="paczkomat">Paczkomat</option>
-                                <option value="kurier">Kurier</option>
-                                <option value="orlen">Odbiór na stacji Orlen</option>
-                            </select>
-                        </div>
-                    </section>
-                    <input type="submit" value="Wyślij">
-                </form>
+                <h1>Odbierz paczkę</h1>
+                <h3>Jeśli chcesz odebrać swoją paczkę użyj aplikacji mobilnej lub podejdź do maszyny paczkomatowej i wprowadź numer swojej przesyłki</h3>
+                <p>Aplikacja dostępna do pobrania na Goole Play oraz App Store</p>
+                <div class="badges">
+                    <a href=""><img class="badge" src="img/google-play-badge.svg" alt="Pobierz na Google Play"></a>
+                </div>
+                <div class="badges">
+                    <a href=""><img class="badge" style="margin:6%;width:88%" src="img/app-store-badge.svg" alt="Pobierz z App Store"></a>
+                </div>
             </div>
         </div>
     </main>
@@ -185,49 +131,6 @@
             </p>
         </div>
     </footer>
-    <script>
-        const smallPack = document.querySelector(".small-pack");
-        const mediumPack = document.querySelector(".medium-pack");
-        const bigPack = document.querySelector(".big-pack");
-
-        const inputRadioIsChecked = () => {
-            if (!document.querySelector(".small-pack input[type='radio']").checked) {
-                smallPack.style.backgroundColor = "#fff";
-                smallPack.classList.remove("pack-size-scaleUp");
-            }
-            if (!document.querySelector(".medium-pack input[type='radio']").checked) {
-                mediumPack.style.backgroundColor = "#fff";
-                mediumPack.classList.remove("pack-size-scaleUp");
-            }
-            if (!document.querySelector(".big-pack input[type='radio']").checked) {
-                bigPack.style.backgroundColor = "#fff";
-                bigPack.classList.remove("pack-size-scaleUp");
-            }
-        }
-
-        inputRadioIsChecked();
-
-        smallPack.addEventListener("click", () => {
-            document.querySelector(".small-pack input[type='radio']").checked = true;
-            smallPack.style.backgroundColor = "#47E74F";
-            smallPack.classList.add("pack-size-scaleUp");
-            inputRadioIsChecked();
-        });
-
-        mediumPack.addEventListener("click", () => {
-            document.querySelector(".medium-pack input[type='radio']").checked = true;
-            mediumPack.style.backgroundColor = "#47E74F";
-            mediumPack.classList.add("pack-size-scaleUp");
-            inputRadioIsChecked();
-        });
-
-        bigPack.addEventListener("click", () => {
-            document.querySelector(".big-pack input[type='radio']").checked = true;
-            bigPack.style.backgroundColor = "#47E74F";
-            bigPack.classList.add("pack-size-scaleUp");
-            inputRadioIsChecked();
-        });
-    </script>
 </body>
 
 </html>

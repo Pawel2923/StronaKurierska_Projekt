@@ -5,10 +5,6 @@
 * Browsers: last 4 version
 */
 
-.main-content {
-    padding-top: 5vh;
-}
-
 form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17,17 +13,27 @@ form {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-color: #eceeec;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10vw;
 }
 
-.main-content h3 {
+.main-content h5 {
     margin-bottom: 10px;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 10vh;
+    position: relative;
 }
 
-section:last-child {
+section:last-of-type {
+    margin-bottom: 5vh;
+}
+
+form>section:last-child {
     margin-bottom: 0;
 }
 
@@ -54,6 +60,7 @@ section:last-child {
     -o-transition: 80ms linear;
     transition: 80ms linear;
     cursor: pointer;
+    background-color: #fff;
 }
 
 .pack-size:hover {
@@ -68,6 +75,8 @@ section:last-child {
     -webkit-transform: scale(1.05, 1.05);
         -ms-transform: scale(1.05, 1.05);
             transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
 }
 
 .pack-size:last-child {
@@ -110,11 +119,13 @@ section:last-child {
     cursor: pointer;
     font-size: 16px;
 }
-    .control input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
 .control_indicator {
     position: absolute;
     top: 2px;
@@ -130,7 +141,6 @@ section:last-child {
     background-color: #ffffff;
 }
 .control input:disabled ~ .control_indicator {
-    background-color: #e6e6e6;
     opacity: 0.6;
     pointer-events: none;
 }
@@ -149,8 +159,8 @@ section:last-child {
 }
 
 .control-radio .control_indicator:after {
-    left: 4px;
-    top: 4px;
+    left: 3px;
+    top: 3px;
     height: 12px;
     width: 12px;
     border-radius: 50%;
@@ -181,6 +191,10 @@ select:last-child {
 /* Mobile */
 
 @media screen and (max-width: 1024px) {
+    form {
+        padding: 5vw;
+    }
+
     section {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -237,8 +251,8 @@ select:last-child {
     }
 
     .control-radio .control_indicator:after {
-        left: 3px;
-        top: 3px;
+        left: 2px;
+        top: 2px;
         height: 9px;
         width: 9px;
     }
@@ -250,7 +264,8 @@ select:last-child {
 
     input[type=text],
     input[type=email],
-    input[type=tel] {
+    input[type=tel],
+    select {
         width: 250px;
     }
 }

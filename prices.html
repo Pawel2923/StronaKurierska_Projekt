@@ -34,37 +34,75 @@
             </svg>
         </a>
         <div class="mobile-nav-container">
-            <p>Professional Delivery Service</p>
+            <a href="index.html"><p>Professional Delivery Service</p></a>
             <i class="mobile-menu-icon menu-open"><img src="img/menuButton.png" alt="Ikona menu"></i>
         </div>
-        <ul class="mobile-nav">
+        <ul class="std-nav mobile-nav">
             <i class="mobile-menu-icon menu-close"><img src="img/menuButtonClose.png" alt="Ikona menu"></i>
             <li><a href="index.html">Główna</a></li>
             <li><a href="send.html">Nadaj paczkę</a></li>
-            <li><a href="send.html">Odbierz paczkę</a></li>
+            <li><a href="receive.html">Odbierz paczkę</a></li>
             <li><a href="prices.html">Cennik</a></li>
         </ul>
     </nav>
     <main>
         <div class="main-container">
             <div class="main-content">
-                <h1>Kalkulator cen</h1>
-                <div class="form-container">
-                    <form action="" method="GET">
-                        <label for="weight">Waga paczki</label>
-                        <input type="text" name="weight">
-                        <label for="size">Rozmiar paczki</label>
-                        <input type="text" name="size">
-                        <label for="length">Odległość do punktu odbioru</label>
-                        <input type="text" name="length">
-                        <input type="submit" value="Wprowadź">
-                    </form>
-                    <div class="result">
-                        <p>Cena:</p>
-                        <p class="result-price">00,00zł</p>
-                    </div>
-                </div>
                 <h1>Cennik</h1>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Rozmiar</th>
+                            <th>Waga</th>
+                            <th>Odległość transportu</th>
+                            <th>Cena</th>
+                        </tr>
+                        <tr>
+                            <td>8 x 38 x 64cm</td>
+                            <td>25kg</td>
+                            <td>250km</td>
+                            <td>13,00zł</td>
+                        </tr>
+                        <tr>
+                            <td>19 x 38 x 64cm</td>
+                            <td>35kg</td>
+                            <td>250km</td>
+                            <td>14,20zł</td>
+                        </tr>
+                        <tr>
+                            <td>41 x 38 x 64cm</td>
+                            <td>50kg</td>
+                            <td>250km</td>
+                            <td>16,71 zł</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Dopłata</th>
+                            <th>Koszt</th>
+                        </tr>
+                        <tr>
+                            <td>Ubezpieczenie</td>
+                            <td>Wliczone w cenę</td>
+                        </tr>
+                        <tr>
+                            <td>Opłata paliwowa</td>
+                            <td>Wliczone w cenę</td>
+                        </tr>
+                        <tr>
+                            <td>Opłata za przesyłkę ponad gabaryt 50x50x80cm</td>
+                            <td>280,00zł</td>
+                        </tr>
+                        <tr>
+                            <td>Opłata za przesyłkę wagi większej niż 50kg</td>
+                            <td>300,00zł</td>
+                        </tr>
+                        <tr>
+                            <td>Dopłata co kolejne 250km</td>
+                            <td>29,87zł</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
