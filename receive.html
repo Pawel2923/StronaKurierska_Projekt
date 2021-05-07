@@ -16,12 +16,29 @@
     <script src="https://kit.fontawesome.com/32373b1277.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <style>
-        footer {
+        .badges {
+            width: 300px;
+        }
+
+        .badge {
             width: 100%;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: -50%;
+            height: auto;
+        }
+
+        /* Desktop/Laptops */
+
+        @media screen and (min-width: 1024px) {
+            footer {
+                margin-top: 10vh;
+            }
+        }
+
+        /* 4k */
+
+        @media screen and (min-width: 2560px) {
+            footer {
+                margin-top: 20vh;
+            }
         }
     </style>
 </head>
@@ -60,9 +77,14 @@
         <div class="main-container">
             <div class="main-content">
                 <h1>Odbierz paczkę</h1>
-                <h3>Jeśli chcesz odebrać swoją paczkę użyj aplikacji mobilnej lub podejdź do maszyny paczkomatowej i wprowadź kod swojej przesyłki</h3>
-                <a href=""><img src="img/google-play-badge.png" alt="Pobierz z Google Play"></a>
-                <a href=""><img src="img/aplikacja-apple-2.jpg" alt="Pobierz z Google Play"></a>
+                <h3>Jeśli chcesz odebrać swoją paczkę użyj aplikacji mobilnej lub podejdź do maszyny paczkomatowej i wprowadź numer swojej przesyłki</h3>
+                <p>Aplikacja dostępna do pobrania na Goole Play oraz App Store</p>
+                <div class="badges">
+                    <a href=""><img class="badge" src="img/google-play-badge.svg" alt="Pobierz na Google Play"></a>
+                </div>
+                <div class="badges">
+                    <a href=""><img class="badge" style="margin:6%;width:88%" src="img/app-store-badge.svg" alt="Pobierz z App Store"></a>
+                </div>
             </div>
         </div>
     </main>
