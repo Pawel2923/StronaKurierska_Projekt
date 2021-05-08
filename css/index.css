@@ -68,7 +68,6 @@ header p:last-child {
     margin-bottom: 0;
 }
 
-
 @media screen and (min-width: 600px) {
     .about div {
         width: 45%;
