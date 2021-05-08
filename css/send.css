@@ -1,18 +1,11 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     background-color: #eceeec;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -44,8 +37,8 @@ form>section:last-child {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: flex-start;
-        -ms-flex-pack: flex-start;
-            justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
 }
 
 .pack-size {
@@ -65,18 +58,18 @@ form>section:last-child {
 
 .pack-size:hover {
     -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
     -webkit-transform: scale(1.05, 1.05);
-        -ms-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
 }
 
 .pack-size-scaleUp {
     -webkit-transform: scale(1.05, 1.05);
-        -ms-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
     -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
 }
 
 .pack-size:last-child {
@@ -108,66 +101,12 @@ form>section:last-child {
     width: 100%;
     text-decoration: underline;
 }
-
-.control {
-    font-family: arial;
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 5px;
-    padding-top: 3px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.control input {
+input[type=radio] {
     position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-.control_indicator {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #e6e6e6;
-    border: 1px solid #a0a0a0;
-    border-radius: unset;
-}
-
-.control input:checked ~ .control_indicator {
-    background-color: #ffffff;
-}
-.control input:disabled ~ .control_indicator {
-    opacity: 0.6;
-    pointer-events: none;
-}
-.control_indicator:after {
-    -webkit-box-sizing: unset;
-            box-sizing: unset;
-    content: '';
-    position: absolute;
-    display: none;
-}
-.control input:checked ~ .control_indicator:after {
-    display: block;
-}
-.control-radio .control_indicator {
-    border-radius: 50%;
-}
-
-.control-radio .control_indicator:after {
-    left: 3px;
-    top: 3px;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background-color: #47E74F;
-}
-.control-radio input:disabled ~ .control_indicator:after {
-    background-color: #7b7b7b;
+    top: 20px;
+    left: 20px;
+    height: 15px;
+    width: 15px;
 }
 
 input[type=text],
@@ -201,14 +140,14 @@ select:last-child {
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .package {
@@ -220,14 +159,14 @@ select:last-child {
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .pack-size {
@@ -248,18 +187,6 @@ select:last-child {
         position: absolute;
         left: 5px;
         top: 5px;
-    }
-
-    .control-radio .control_indicator:after {
-        left: 2px;
-        top: 2px;
-        height: 9px;
-        width: 9px;
-    }
-
-    .control_indicator {
-        height: 15px;
-        width: 15px;
     }
 
     input[type=text],
