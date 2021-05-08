@@ -6,6 +6,16 @@ main h1:first-child {
     margin-top: 0;
 }
 
+.table-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.table-container h3 {
+    margin-bottom: 1vh;
+}
+
 table {
     width: 100%;
     border: 1px solid #aaa;
@@ -37,12 +47,6 @@ tr {
 
 tr:nth-of-type(2n) {
     background-color: #fff;
-}
-
-.table-container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
 }
 
 /* Mobile */
