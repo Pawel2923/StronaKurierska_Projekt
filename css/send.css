@@ -2,13 +2,9 @@ form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     background-color: #eceeec;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
     padding: 10vw;
 }
@@ -50,7 +46,6 @@ form>section:last-child {
     text-align: center;
     position: relative;
     -webkit-transition: 80ms linear;
-    -o-transition: 80ms linear;
     transition: 80ms linear;
     cursor: pointer;
     background-color: #fff;
@@ -138,8 +133,6 @@ select:last-child {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
         -webkit-box-align: center;
@@ -157,8 +150,6 @@ select:last-child {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
         -webkit-box-align: center;
@@ -171,8 +162,6 @@ select:last-child {
 
     .pack-size {
         width: 100%;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
         height: fit-content;
         margin-bottom: 20px;
         margin-right: 0;

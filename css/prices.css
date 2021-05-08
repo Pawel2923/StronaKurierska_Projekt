@@ -7,8 +7,6 @@ main h1:first-child {
 }
 
 .table-container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
 }
 

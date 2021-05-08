@@ -393,7 +393,6 @@ button {
     padding: 10px;
     cursor: pointer;
     -webkit-transition: all 80ms linear;
-    -o-transition: all 80ms linear;
     transition: all 80ms linear;
     border-radius: 15px;
 }
@@ -429,7 +428,6 @@ button:active {
 a {
     color: #298334;
     -webkit-transition: color 80ms linear;
-    -o-transition: color 80ms linear;
     transition: color 80ms linear;
 }
 
