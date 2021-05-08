@@ -46,44 +46,45 @@ header p:last-child {
     }
 }
 
-/* Content pod nagłówkiem */
+/* Main content */
 
 .about {
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about img {
+    display: none;
 }
 
 .about p {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
-.about p:last-of-type {
+.about p:last-child {
     margin-bottom: 0;
-}
-
-.line {
-    display: none;
 }
 
 
 @media screen and (min-width: 600px) {
-    .main-content h1 {
-        text-align: center;
+    .about div {
+        width: 45%;
+    }
+
+    .about div:first-child {
+        width: fit-content;
     }
 
     .about p {
         font-size: 1.3em;
-        width: 45%;
-        margin-bottom: 0;
     }
 
-    .line {
+    .about img {
         display: block;
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        margin-left: -1px;
-        background-color: #bbbbbb;
-        width: 2px;
-        height: 80%;
+        width: 20vw;
+        height: auto;
     }
 }
