@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,36 +16,46 @@
     <script src="https://kit.fontawesome.com/32373b1277.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </head>
+
 <body>
+    <nav>
+        <a href="index.html" class="logo-link">
+            <img src="img/logo.png" class="nav-logo" alt="logo">
+        </a>
+        <div class="mobile-nav-container">
+            <a href="index.html">
+                <p>Professional Delivery Service</p>
+            </a>
+            <i class="mobile-menu-icon menu-open"><img src="img/menuButton.png" alt="Ikona menu"></i>
+        </div>
+        <ul class="std-nav mobile-nav">
+            <li><i class="mobile-menu-icon menu-close"><img src="img/menuButtonClose.png"
+                        alt="Ikona menu"></i></li>
+            <li><a href="index.html">Główna</a></li>
+            <li><a href="send.html">Usługi</a></li>
+            <li><a href="prices.html">Cennik</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
     <header>
-        <div class="container">
-            <div class="content">
-                <nav>
-                    <a href="index.html" class="logo-link">   
-                        <img src="img/logo.png" class="nav-logo" alt="logo">
-                    </a>
-                    <div class="mobile-nav-container">
-                        <a href="index.html"><p>Professional Delivery Service</p></a>
-                        <i class="mobile-menu-icon menu-open"><img src="img/menuButton.png" alt="Ikona menu"></i>
+        <div class="header-container">
+            <div class="header-content">
+                <div class="header-text-container">
+                    <h1>PROFESSIONAL DELIVERY SERVICE</h1>
+                    <div class="span-container">
+                        <span class="span-visible">Profesjonalizm</span>
+                        <span class="span-hidden">Niezawodność</span>
+                        <span class="span-hidden">Wygoda</span>
                     </div>
-                    <ul class="std-nav mobile-nav">
-                        <li><i class="mobile-menu-icon menu-close"><img src="img/menuButtonClose.png" alt="Ikona menu"></i></li>
-                        <li><a href="index.html">Główna</a></li>
-                        <li><a href="send.html">Nadaj paczkę</a></li>
-                        <li><a href="receive.html">Odbierz paczkę</a></li>
-                        <li><a href="prices.html">Cennik</a></li>
-                    </ul>
-                </nav>
-                <div class="header-container">
-                    <h1>Witaj na stronie PDS!</h1>
-                    <h3>Chcesz nadać paczkę?</h3>
-                    <p>
-                        Używając naszych usług nadasz paczkę szybko i przez internet.
-                    </p>
-                    <h3>Chcesz odebrać paczkę?</h3>
-                    <p>
-                        Używając naszej aplikacji mobilnej szybko odbierzesz swoją paczkę
-                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="main-content">
+                <div class="tracker-container">
                     <h3>Chcesz sprawdzić status swojej paczki?</h3>
                     <p>
                         Wpisz 18 cyfr numeru paczki i sprawdź status swojej paczki.
@@ -58,12 +69,6 @@
                         <div class="warning"></div>
                     </form>
                 </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="main-container">
-            <div class="main-content">
                 <div class="about">
                     <div><img src="img/img1.jpg" alt="Nie wczytano zdjęcia"></div>
                     <div>
@@ -81,6 +86,11 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d391.15511389523783!2d20.692572088889193!3d49.625853644929094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473dfab34ebcdc75%3A0x9c3f143eeb1a3d80!2zWmVzcMOzxYIgU3prw7PFgiBuciA0IHcgTm93eW0gU8SFY3p1!5e0!3m2!1sen!2spl!4v1622813391642!5m2!1sen!2spl"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </main>
@@ -128,6 +138,24 @@
         </div>
     </footer>
     <script>
+        const span = document.querySelectorAll(".header-container span");
+        let prv = 0;
+
+        const changeSpan = () => {
+            span[prv].classList.remove("span-visible");
+            span[prv].classList.add("span-hidden");
+
+            if (prv == span.length - 1)
+                prv = 0;
+            else
+                prv++;
+
+            span[prv].classList.remove("span-hidden");
+            span[prv].classList.add("span-visible");
+        }
+
+        setInterval(changeSpan, 3000);
+
         const parcelForm = document.querySelector(".parcel-tracker");
         const numberInput = document.querySelector(".parcel-number");
 
@@ -153,5 +181,7 @@
             }
         });
     </script>
+    <script src="scrollAnim.js"></script>
 </body>
+
 </html>
