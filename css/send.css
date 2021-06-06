@@ -4,7 +4,8 @@ form {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: #eceeec;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
     width: fit-content;
     padding: 10vw;
 }

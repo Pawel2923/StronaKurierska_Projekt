@@ -101,12 +101,22 @@ main p:last-child {
     animation-name: fadeOut;
 }
 
+.main-content {
+    padding: 0;
+}
+
 .main-content>div:last-of-type {
     margin-bottom: 0;
 }
 
 .main-content>div {
     margin-bottom: 5vh;
+}
+
+.tracker-container {
+    background-color: #fff;
+    padding: 15vh 0;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.1);
 }
 
 .about {

@@ -10,6 +10,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1.1em;
     scroll-behavior: smooth;
+    background-color: #eceeec;
 }
 
 /* Nawigacja */
@@ -57,7 +58,6 @@ nav ul a {
     text-decoration: none;
     color: #000;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
@@ -119,7 +119,6 @@ nav ul a:hover {
         background-color: #47E74F;
         z-index: 4;
         -webkit-transition: 150ms ease-out;
-        -o-transition: 150ms ease-out;
         transition: 150ms ease-out;
     }
 
@@ -150,7 +149,6 @@ nav ul a:hover {
         padding: 20px;
         width: 100%;
         -webkit-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
         transition: all 0.2s ease-in;
     }
 
@@ -186,7 +184,6 @@ nav ul a:hover {
     nav ul a {
         padding: 10px 20px;
         -webkit-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
     }
 
@@ -234,9 +231,13 @@ main h1 {
     width: 100%;
     height: auto;
     position: relative;
-    z-index: 5;
     text-align: center;
     overflow: hidden;
+    background-color: #fff;
+    color: #666;
+    font-size: 1rem;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .std-footer {
@@ -249,10 +250,6 @@ main h1 {
     justify-content: center;
 }
 
-.mobile-footer  {
-    font-size: .9rem;
-}
-
 .mobile-footer-container {
     width: 100%;
     display: -webkit-box;
@@ -263,7 +260,6 @@ main h1 {
     align-items: center;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    padding: 5px 0;
 }
 
 .mobile-footer-container>.footer-links {
@@ -279,20 +275,25 @@ main h1 {
 footer p {
     display: block;
     text-align: center;
-    margin: 0 10px;
+    padding-bottom: 10px;
+}
+
+footer p:last-of-type {
+    padding-bottom: 0;
 }
 
 footer a i {
-    color: #222;
-    font-size: 1.6rem;
-    padding: 10px;
+    color: #666;
     -webkit-transition: color 0.2s ease-out;
-    -o-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
 }
 
-footer a i:last-child {
-    padding-right: 0;
+footer a {
+    padding-left: 10px;
+}
+
+footer a:first-of-type {
+    padding-left: 0;
 }
 
 .fa-envelope-square:hover {
@@ -311,24 +312,6 @@ footer a i:last-child {
     color: #1D88D0;
 }
 
-.footer-links a {
-    padding: 10px;
-    color: #000;
-    -webkit-transition: color 0.2s ease-out;
-    -o-transition: color 0.2s ease-out;
-    transition: color 0.2s ease-out;
-    text-decoration: none;
-}
-
-.footer-links a:first-child {
-    padding-left: 0;
-}
-
-.footer-links a:hover {
-    color: #47E74F;
-    text-decoration: none;
-}
-
 @media screen and (min-width: 600px) {
     .mobile-footer {
         display: none;
@@ -338,14 +321,6 @@ footer a i:last-child {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-    }
-
-    footer p {
-        margin: 0 20px;
-    }
-
-    footer a i {
-        font-size: 1.4rem;
     }
 }
 
@@ -375,7 +350,6 @@ button {
     padding: 10px;
     cursor: pointer;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     border-radius: 15px;
 }
@@ -411,7 +385,6 @@ button:active {
 a {
     color: #47E74F;
     -webkit-transition: color 0.2s ease-out;
-    -o-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
     text-decoration: none;
 }
