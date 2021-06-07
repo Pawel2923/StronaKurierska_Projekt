@@ -2,12 +2,14 @@ const menuOpen = document.querySelector(".menu-open");
 
 menuOpen.addEventListener("click", () => {
     document.querySelector("nav ul").style.transform = "translateX(-100%)";
+    document.querySelector("body").style.overflow = "hidden";
 });
 
 const menuClose = document.querySelector(".menu-close");
 
 menuClose.addEventListener("click", () => {
     document.querySelector("nav ul").style.transform = "translateX(0)";
+    document.querySelector("body").style.overflow = "initial";
 });
 
 if (window.innerWidth >= 600) {
