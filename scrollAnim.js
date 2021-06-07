@@ -2,6 +2,7 @@ const h1 = document.querySelectorAll("main h1");
 const h3 = document.querySelectorAll("main h3");
 const p = document.querySelectorAll("main p");
 const label = document.querySelectorAll("main label");
+const image = document.querySelectorAll("main img")
 
 window.addEventListener("scroll", function () {
     for (let i = 0; i < h1.length; i++) {
@@ -33,6 +34,14 @@ window.addEventListener("scroll", function () {
         if (position.top < window.innerHeight && position.bottom >= 0) {
             label[i].style.opacity = "1";
             label[i].style.transform = "translateY(0)";
+        }
+    }
+
+    for (let i = 0; i < image.length; i++) {
+        let position = image[i].getBoundingClientRect();
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            image[i].style.opacity = "1";
+            image[i].style.transform = "translateY(0)";
         }
     }
 });
