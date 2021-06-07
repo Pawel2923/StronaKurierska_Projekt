@@ -105,10 +105,6 @@ main p:last-child {
     padding: 0;
 }
 
-.main-content>div:last-of-type {
-    margin-bottom: 0;
-}
-
 .main-content>div {
     margin-bottom: 5vh;
 }
@@ -117,6 +113,58 @@ main p:last-child {
     background-color: #fff;
     padding: 15vh 0;
     box-shadow: 0px 2px 5px rgba(0,0,0,.1);
+}
+
+.services {
+    width: 100%;
+    display: flex;
+}
+
+.service {
+    width: 50%;
+    padding: 80px 50px;
+    background-size: 100%;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.service-overlay {
+    transition: all 0.2s ease-in;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    transform: translateX(-100%);
+}
+
+.service button {
+    color: #fff;
+}
+
+.service h3,
+.service p,
+.service button {
+    z-index: 1;
+    position: relative;
+}
+
+.service:hover .service-overlay {
+    transform: translateX(0);
+}
+
+.service-left {
+    background-image: url(../img/img2.png);
+}
+
+.service-right {
+    background-image: url(../img/img3.png);
 }
 
 .about {
@@ -147,17 +195,37 @@ main h1,
 main h3,
 main p,
 main label {
-    -webkit-transform: translateY(-30%);
-    -ms-transform: translateY(-30%);
-    transform: translateY(-30%);
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
     opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in, -webkit-transform 0.2s ease-in;
-    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+    -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 }
 
 @media screen and (max-width: 600px) {
     header h1 {
         font-size: 31px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 100%;
+        padding: 50px 50px;
+    }
+
+    .service-overlay {
+        transform: translateX(0);
+    }
+
+    .tracker-container,
+    .about {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
