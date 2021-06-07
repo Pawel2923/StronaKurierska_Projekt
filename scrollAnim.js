@@ -7,41 +7,36 @@ const image = document.querySelectorAll("main img")
 window.addEventListener("scroll", function () {
     for (let i = 0; i < h1.length; i++) {
         let position = h1[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-            h1[i].style.opacity = "1";
-            h1[i].style.transform = "translateY(0)";
+        if (position.top < window.innerHeight && position.bottom >= 100) {
+            h1[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < p.length; i++) {
         let position = p[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-            p[i].style.opacity = "1";
-            p[i].style.transform = "translateY(0)";
+        if (position.top < window.innerHeight && position.bottom >= 100) {
+            p[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < h3.length; i++) {
         let position = h3[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-            h3[i].style.opacity = "1";
-            h3[i].style.transform = "translateY(0)";
+        if (position.top < window.innerHeight && position.bottom >= 100) {
+            h3[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < label.length; i++) {
         let position = label[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-            label[i].style.opacity = "1";
-            label[i].style.transform = "translateY(0)";
+        if (position.top < window.innerHeight && position.bottom >= 100) {
+            label[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < image.length; i++) {
         let position = image[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-            image[i].style.opacity = "1";
-            image[i].style.transform = "translateY(0)";
+        if (position.top < window.innerHeight && position.bottom >= 100) {
+            image[i].style.animationName = "scrollAnim";
         }
     }
 });

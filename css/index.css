@@ -82,15 +82,46 @@ main p:last-child {
     width: 100%;
     background-color: rgba(255,255,255,0.7);
     margin: 0 auto;
+    position: relative;
 }
 
 @media screen and (min-width: 600px) {
     .header-container {
         background-position: 0 80%;
     }
-    .header-content {
-        width: 100%;
-    }
+}
+
+.header-subtext {
+    text-transform: uppercase;
+    font-size: .9em;
+}
+
+.header-scdown {
+    position: absolute;
+    bottom: 20px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.header-scdown h5 {
+    animation-fill-mode: forwards;
+    animation-name: scText;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    margin-bottom: 5px;
+}
+
+.header-scdown i {
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+    opacity: 0.2;
+    transform: translateY(-200%);
+}
+
+.header-scdown:hover .fas{
+    animation-name: scArrowHover;
 }
 
 .span-visible {
@@ -115,6 +146,11 @@ main p:last-child {
     box-shadow: 0px 2px 5px rgba(0,0,0,.1);
 }
 
+.services-header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .services {
     width: 100%;
     display: flex;
@@ -134,7 +170,7 @@ main p:last-child {
 }
 
 .service-overlay {
-    transition: all 0.2s ease-in;
+    transition: all 0.25s ease-in;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -146,6 +182,14 @@ main p:last-child {
 
 .service button {
     color: #fff;
+}
+
+.service:hover button {
+    color: #000;
+    background-color: #47E74F;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5%);
 }
 
 .service h3,
@@ -176,7 +220,10 @@ main p:last-child {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: aliceblue;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    padding: 15vh 0;
 }
 
 .about img {
@@ -196,12 +243,10 @@ main h3,
 main p,
 main label,
 main img {
-    -webkit-transform: translateY(-40%);
-    -ms-transform: translateY(-40%);
-    transform: translateY(-40%);
     opacity: 0;
-    -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
-    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
 }
 
 @media screen and (max-width: 600px) {
@@ -269,27 +314,25 @@ main img {
     }
 }
 
-@keyframes fadeIn {
+@keyframes scText {
     0% {
-        transform: translateX(-10%);
-        opacity: 0;
+        transform: translateY(-400%);
+        opacity: 0.2;
     }
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes fadeOut {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
+@keyframes scArrowHover {
+    0%   {
+        transform: translateY(0); 
     }
-    50% {
-        opacity: 0;
+    50%  {
+        transform: translateY(-25%); 
     }
     100% {
-        transform: translateX(10%);
-        opacity: 0;
+        transform: translateY(0); 
     }
 }
