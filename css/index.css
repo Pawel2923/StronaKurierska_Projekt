@@ -75,21 +75,6 @@ main p:last-child {
     margin: 0 auto;
 }
 
-.header-text-container span {
-    -webkit-animation-duration: 0.4s;
-    animation-duration: 0.4s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    position: absolute;
-    opacity: 0;
-}
-
-.header-text-container span:first-of-type {
-    opacity: 1;
-}
-
 .header-container {
     width: 100%;
     background-image: url("../img/bg1.jfif");
@@ -114,6 +99,13 @@ main p:last-child {
 .header-subtext {
     text-transform: uppercase;
     font-size: .9em;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    position: absolute;
 }
 
 .header-scdown {
@@ -130,8 +122,8 @@ main p:last-child {
     animation-fill-mode: forwards;
     -webkit-animation-name: scText;
     animation-name: scText;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.45s;
+    animation-duration: 0.45s;
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     margin-bottom: 5px;
@@ -144,10 +136,8 @@ main p:last-child {
     animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-    -webkit-transition: opacity 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    transition: opacity 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
-    transition: transform 0.5s ease-in, opacity 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    -webkit-transition: opacity 0.4s ease-in, -webkit-transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in;
     opacity: 0.2;
     -webkit-transform: translateY(-200%);
     transform: translateY(-200%);

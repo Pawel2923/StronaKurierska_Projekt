@@ -162,8 +162,10 @@
             });
         });
 
-        document.querySelector(".header-scdown i").style.transform = "translateY(0)";
-        document.querySelector(".header-scdown i").style.opacity = 1;
+        setTimeout(() => {
+            document.querySelector(".header-scdown i").style.transform = "translateY(0)";
+            document.querySelector(".header-scdown i").style.opacity = 1;
+        }, 10);
 
         const span = document.querySelectorAll(".header-container span");
         let prv = 0;
