@@ -190,6 +190,7 @@ main p:last-child {
 .warning {
     opacity: 0;
     color: #CC0000;
+    -webkit-transition: opacity .2s ease-in;
     transition: opacity .2s ease-in;
 }
 
