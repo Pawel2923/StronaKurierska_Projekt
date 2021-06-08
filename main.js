@@ -1,5 +1,4 @@
 const path = window.location.pathname;
-const regex = /\//ig;
 const menuOpen = document.querySelector(".menu-open");
 
 menuOpen.addEventListener("click", () => {
@@ -26,7 +25,7 @@ const changeNavbar = () => {
         nav.style.transform = "scale(1.1)";
     }
     else if (window.scrollY == 0) {
-        if (path.indexOf("index.html") > -1 || path.match(regex)) {
+        if (path.indexOf("index.html") > -1 || (path.charAt(0) == "/" && path.length <= 1)) {
             nav.style.backgroundColor = "transparent";
             submenu.style.backgroundColor = "transparent";
             secSubmenu.style.backgroundColor = "transparent";
@@ -52,7 +51,7 @@ const navBarH = () => {
 navBarH();
 setInterval(navBarH, 1000);
 
-if (path.indexOf("index.html") > -1 || path.match(regex)) {
+if (path.indexOf("index.html") > -1 || (path.charAt(0) == "/" && path.length <= 1)) {
     const navLinks = [document.querySelector("nav a[href='index.html#about']"), document.querySelector("nav a[href='index.html#contact']")];
 
     for (let i = 0; i < navLinks.length; i++) {
