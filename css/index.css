@@ -221,7 +221,6 @@ main p:last-child {
     color: #fff;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -282,6 +281,7 @@ main p:last-child {
 
 .service-right {
     background-image: url(../img/img3.png);
+    cursor: pointer;
 }
 
 .about {
