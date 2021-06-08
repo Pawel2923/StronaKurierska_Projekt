@@ -12,29 +12,40 @@ menuClose.addEventListener("click", () => {
     document.querySelector("body").style.overflow = "initial";
 });
 
-if (window.innerWidth >= 600) {
-    const nav = document.querySelector("nav");
-    const submenu = document.querySelector(".submenu");
-    const secSubmenu = document.querySelector(".sec-submenu");
+const nav = document.querySelector("nav");
+const submenu = document.querySelector(".submenu");
+const secSubmenu = document.querySelector(".sec-submenu");
 
-    const changeNavbar = () => {
-        if (window.scrollY > 200) {
-            nav.style.backgroundColor = "#47E74F";
-            submenu.style.backgroundColor = "#47E74F";
-            secSubmenu.style.backgroundColor = "#47E74F";
-            nav.style.transform = "scale(1.1)";
-        }
-        else if (window.scrollY == 0) {
-            if (window.location.pathname.indexOf("index.html") > -1) {
-                nav.style.backgroundColor = "transparent";
-                submenu.style.backgroundColor = "transparent";
-                secSubmenu.style.backgroundColor = "transparent";
-            }
-            nav.style.transform = "scale(1)";
-        }
+const changeNavbar = () => {
+    if (window.scrollY > 200) {
+        nav.style.backgroundColor = "#47E74F";
+        submenu.style.backgroundColor = "#47E74F";
+        secSubmenu.style.backgroundColor = "#47E74F";
+        nav.style.transform = "scale(1.1)";
     }
-
-    changeNavbar(0);
-
-    window.addEventListener("scroll", changeNavbar);
+    else if (window.scrollY == 0) {
+        if (window.location.pathname.indexOf("index.html") > -1) {
+            nav.style.backgroundColor = "transparent";
+            submenu.style.backgroundColor = "transparent";
+            secSubmenu.style.backgroundColor = "transparent";
+        }
+        nav.style.transform = "scale(1)";
+    }
 }
+
+const navBarH = () => {
+    if (window.innerWidth <= 600) {
+        window.removeEventListener("scroll", changeNavbar, true);
+        nav.style.transform = "initial";
+        nav.style.backgroundColor = "#47E74F";
+        submenu.style.backgroundColor = "#47E74F";
+        secSubmenu.style.backgroundColor = "#47E74F";
+    }
+    else {
+        changeNavbar();
+        window.addEventListener("scroll", changeNavbar, true);
+    }
+}
+
+navBarH();
+setInterval(navBarH, 1000);
