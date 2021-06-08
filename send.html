@@ -160,6 +160,8 @@
         const mediumPack = document.querySelector(".medium-pack");
         const bigPack = document.querySelector(".big-pack");
 
+        const packs = [smallPack, mediumPack, bigPack];
+
         const inputRadioIsChecked = () => {
             if (!document.querySelector(".small-pack input[type='radio']").checked) {
                 smallPack.style.backgroundColor = "#fff";
@@ -175,12 +177,23 @@
             }
         }
 
+        const borderChange = () => {
+            if (inputRadioIsChecked) {
+                for (let i = 0; i < packs.length; i++) {
+                    packs[i].style.borderColor = "#000";
+                    packs[i].style.borderWidth = "1px";
+                }
+            }
+        }
+
         inputRadioIsChecked();
 
         smallPack.addEventListener("click", () => {
             document.querySelector(".small-pack input[type='radio']").checked = true;
             smallPack.style.backgroundColor = "#47E74F";
             smallPack.classList.add("pack-size-scaleUp");
+            
+            borderChange();
             inputRadioIsChecked();
         });
 
@@ -188,6 +201,8 @@
             document.querySelector(".medium-pack input[type='radio']").checked = true;
             mediumPack.style.backgroundColor = "#47E74F";
             mediumPack.classList.add("pack-size-scaleUp");
+
+            borderChange();
             inputRadioIsChecked();
         });
 
@@ -195,6 +210,8 @@
             document.querySelector(".big-pack input[type='radio']").checked = true;
             bigPack.style.backgroundColor = "#47E74F";
             bigPack.classList.add("pack-size-scaleUp");
+
+            borderChange();
             inputRadioIsChecked();
         });
     </script>

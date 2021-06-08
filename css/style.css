@@ -420,6 +420,27 @@ select {
     outline-color: #47E74F;
 }
 
+input[type=text]:invalid,
+input[type=email]:invalid,
+input[type=tel]:invalid,
+input[type=number]:invalid,
+textarea:invalid,
+select:invalid {
+    outline: solid #CC0000;
+    outline-offset: -1px;
+    outline-width: 1px;
+}
+
+input[type=text]:invalid:focus,
+input[type=email]:invalid:focus,
+input[type=tel]:invalid:focus,
+input[type=number]:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+    outline-style: dashed;
+    outline-width: 2px;
+}
+
 input[type=submit],
 input[type=button],
 button {
@@ -445,12 +466,7 @@ button:hover {
 input[type=submit]:active,
 input[type=button]:active,
 button:active {
-    border-color: black;
-}
-
-.warning {
-    display: none;
-    color: #CC0000;
+    border-color: #000;
 }
 
 @media screen and (max-width: 600px) {
@@ -475,64 +491,6 @@ a:hover {
 
 a:visited {
     color: #000;
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        -webkit-transform: translateX(-10%);
-        transform: translateX(-10%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        -webkit-transform: translateX(-10%);
-        transform: translateX(-10%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(10%);
-        transform: translateX(10%);
-        opacity: 0;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(10%);
-        transform: translateX(10%);
-        opacity: 0;
-    }
 }
 
 @-webkit-keyframes scrollAnim {
