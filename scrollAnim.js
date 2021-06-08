@@ -7,35 +7,35 @@ const image = document.querySelectorAll("main img")
 window.addEventListener("scroll", function () {
     for (let i = 0; i < h1.length; i++) {
         let position = h1[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 100) {
+        if (position.top < window.innerHeight && position.bottom >= 50) {
             h1[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < p.length; i++) {
         let position = p[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 100) {
+        if (position.top < window.innerHeight && position.bottom >= 50) {
             p[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < h3.length; i++) {
         let position = h3[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 100) {
+        if (position.top < window.innerHeight && position.bottom >= 50) {
             h3[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < label.length; i++) {
         let position = label[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 100) {
+        if (position.top < window.innerHeight && position.bottom >= 50) {
             label[i].style.animationName = "scrollAnim";
         }
     }
 
     for (let i = 0; i < image.length; i++) {
         let position = image[i].getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 100) {
+        if (position.top < window.innerHeight && position.bottom >= 50) {
             image[i].style.animationName = "scrollAnim";
         }
     }

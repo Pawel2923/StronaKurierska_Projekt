@@ -49,3 +49,13 @@ const navBarH = () => {
 
 navBarH();
 setInterval(navBarH, 1000);
+
+if (window.location.pathname.indexOf("index.html") > -1) {
+    const navLinks = [document.querySelector("nav a[href='index.html#about']"), document.querySelector("nav a[href='index.html#contact']")];
+
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener("click", () => {
+            document.querySelector("nav ul").style.transform = "translateX(0)";
+        });
+    }
+}

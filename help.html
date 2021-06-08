@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Professional Delivery Service | Cennik</title>
     <link rel="Stylesheet" href="css/style.css">
-    <link rel="Stylesheet" href="css/prices.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap"
         rel="stylesheet">
@@ -17,6 +16,48 @@
         .submenu,
         .sec-submenu {
             background-color: #47E74F;
+        }
+
+        .form-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        form {
+            width: 40%;
+        }
+
+        input, 
+        label {
+            display: block;
+        }
+
+        input {
+            margin-bottom: 10px;
+            width: 80%;
+        }
+
+        label:first-of-type {
+            margin-top: 20px;
+        }
+
+        input[type=submit] {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            resize: none;
+            height: 10vh;
+            padding: 5px;
+        }
+
+        .form-container p {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -46,19 +87,46 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#">Obsługa klienta</a></li>
+                        <li><a href="help.html">Obsługa klienta</a></li>
                     </ul>
                 </div>
             </li>
             <li><a href="prices.html">Cennik</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="contact.html">O nas</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="index.html#about">O nas</a></li>
         </ul>
     </nav>
     <main>
         <div class="main-container">
             <div class="main-content">
-                <h1>This subpage is in build process </h1>
+                <h1>Obsługa klienta</h1>
+                <div class="form-container">
+                    <div class="contact">
+                        <h4>Zkontaktuj się z nami:</h4>
+                        <p>Adres: Świętego Ducha 6, 33-300 Nowy Sącz</p>
+                        <p>Email: pdshelpcenter@pds.com</p>
+                        <p>Numer telefonu: (922)300-146836</p>
+                    </div>
+                    <form method="GET">
+                        <section>
+                            <h3>Wiadomość do obsługi klienta</h3>
+                            <h5>Wprowadź wszystkie dane</h5>
+                            <div class="recipient">
+                                <label for="recipient-name">Imię i nazwisko lub nazwa firmy</label>
+                                <input type="text" name="recipient-name" required>
+                                <label for="recipient-email">Adres e-mail</label>
+                                <input type="email" name="recipient-email" required>
+                                <label for="recipient-number">Numer telefonu</label>
+                                <input type="tel" name="recipient-number" required>
+                                <label for="subject">Temat</label>
+                                <input type="text" name="subject" required>
+                                <label for="message">Wiadomość</label>
+                                <textarea name="message" required></textarea>
+                            </div>
+                        </section>
+                        <input type="submit" value="Wyślij">
+                    </form>
+                </div>
             </div>
         </div>
     </main>
