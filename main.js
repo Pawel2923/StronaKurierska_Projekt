@@ -35,7 +35,7 @@ const changeNavbar = () => {
 }
 
 const navBarH = () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 600 || window.innerHeight <= 450) {
         window.removeEventListener("scroll", changeNavbar, true);
         nav.style.transform = "initial";
         nav.style.backgroundColor = "#47E74F";
