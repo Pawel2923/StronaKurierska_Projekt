@@ -426,27 +426,6 @@ select {
     outline-color: #47E74F;
 }
 
-input[type=text]:invalid,
-input[type=email]:invalid,
-input[type=tel]:invalid,
-input[type=number]:invalid,
-textarea:invalid,
-select:invalid {
-    outline: solid #CC0000;
-    outline-offset: -1px;
-    outline-width: 1px;
-}
-
-input[type=text]:invalid:focus,
-input[type=email]:invalid:focus,
-input[type=tel]:invalid:focus,
-input[type=number]:invalid:focus,
-textarea:invalid:focus,
-select:invalid:focus {
-    outline-style: dashed;
-    outline-width: 2px;
-}
-
 input[type=submit],
 input[type=button],
 button {
