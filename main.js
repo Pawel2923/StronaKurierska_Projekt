@@ -60,3 +60,20 @@ if (path.indexOf("index.html") > -1 || (path.charAt(0) == "/" && path.length <= 
         });
     }
 }
+
+const mobileNavbar = () => {
+    const navOption = document.querySelector('.nav-option-services a');
+    const navOption2 = document.querySelector('.nav-option-delivery a');
+    const submenu1 = document.querySelector('.submenu');
+    const submenu2 = document.querySelector('.sec-submenu');
+
+    navOption.addEventListener('click', function() {
+        submenu1.classList.toggle('submenu-mobile-class');
+    });
+
+    navOption2.addEventListener('click', function(){
+        submenu2.classList.toggle('submenu-mobile-class');
+    });
+}
+
+mobileNavbar();
