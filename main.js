@@ -11,6 +11,9 @@ const menuClose = document.querySelector(".menu-close");
 menuClose.addEventListener("click", () => {
     document.querySelector("nav ul").style.transform = "translateX(0)";
     document.querySelector("body").style.overflow = "initial";
+
+    document.querySelector('.submenu').classList.remove('submenu-mobile-class');
+    document.querySelector('.sec-submenu').classList.remove('submenu-mobile-class');
 });
 
 const nav = document.querySelector("nav");
